@@ -1,5 +1,3 @@
-import Btn from "./btn"
-
 export default function Cart() {
     let cart = ['Tomatoes', 'Pasta', 'KaKao']
     return (
@@ -8,7 +6,6 @@ export default function Cart() {
             <CartItem product={cart[0]}/>
             <CartItem product={cart[1]}/>
             <CartItem product={cart[2]}/>
-            <Btn color='blue'/>
         </div>
     )
 }
