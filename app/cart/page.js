@@ -1,22 +1,22 @@
-import age from './data.js'
-import Hi from './hi.js'
+import Btn from "./btn"
 
 export default function Cart() {
+    let cart = ['Tomatoes', 'Pasta', 'KaKao']
     return (
         <div>
-            <Hi/>
             <h4 className="title">Cart</h4>
-            <CartItem/>
-            <CartItem/>
-            <CartItem/>
+            <CartItem product={cart[0]}/>
+            <CartItem product={cart[1]}/>
+            <CartItem product={cart[2]}/>
+            <Btn color='blue'/>
         </div>
     )
 }
 
-function CartItem() {
+function CartItem(props) {
     return (
         <div className="cart-item">
-            <p>상품명 {age}</p>
+            <p>{props.product}</p>
             <p>$40</p>
             <p>1개</p>
         </div>
